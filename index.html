@@ -9,6 +9,7 @@
       content="Food 4 Mood Tiffin Service in Hisar, Haryana offers homemade and budget-friendly lunch dinner tiffin plans with fresh hygienic food."
     />
     <meta name="theme-color" content="#f59e0b" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     
     <!-- Geo Tags for Local SEO -->
     <meta name="geo.region" content="IN-HR" />
@@ -92,30 +93,44 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Site Header -->
     <header class="site-header" id="top">
-      <div class="container header-wrap">
+      <div class="header-container">
         <div class="brand">
-          <a href="#home">Food 4 Mood</a>
+          <a class="brand-logo-link" href="#home">
+            <span class="brand-badge">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                <line x1="6" y1="1" x2="6" y2="4"></line>
+                <line x1="10" y1="1" x2="10" y2="4"></line>
+                <line x1="14" y1="1" x2="14" y2="4"></line>
+              </svg>
+            </span>
+            <span class="brand-name">Food 4 Mood</span>
+          </a>
           <a
             class="brand-subtitle"
-            href="https://brandomize.netlify.app/"
+            href="https://brandomize.in"
             target="_blank"
             rel="noopener noreferrer"
             >by brandomize</a
           >
         </div>
 
-        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" id="menuToggleBtn">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </button>
 
-        <div class="mobile-menu-wrapper">
+        <div class="mobile-menu-wrapper" id="mobileMenuWrapper">
           <nav class="main-nav" aria-label="Main navigation">
             <a href="#home">Home</a>
             <a href="#menu">Menu</a>
@@ -127,99 +142,222 @@
           </nav>
 
           <div class="header-actions">
-            <a class="btn btn-primary" href="tel:+919350973425">Call Now</a>
+            <a class="btn btn-primary btn-header-cta" href="tel:+919350973425">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>Call Now</span>
+            </a>
           </div>
         </div>
       </div>
     </header>
 
     <main>
-      <section class="hero section" id="home">
-        <div class="container hero-grid">
-          <article class="card delivery-banner" aria-label="Main delivery highlight">
-            <p>We Deliver All Over Hisar</p>
-          </article>
+      <!-- Full-Width Delivery & Trust Strip -->
+      <section class="delivery-strip-full" aria-label="Delivery highlight banner">
+        <div class="delivery-strip-inner">
+          <div class="delivery-strip-item">
+            <span class="strip-dot" aria-hidden="true"></span>
+            <article class="delivery-banner" aria-label="Main delivery highlight">
+              <p>We Deliver All Over Hisar</p>
+            </article>
+          </div>
+          <div class="strip-divider" aria-hidden="true">•</div>
+          <div class="delivery-strip-item">
+            <span class="strip-icon" aria-hidden="true">🍲</span>
+            <span>Fresh Home-Style Meals</span>
+          </div>
+          <div class="strip-divider" aria-hidden="true">•</div>
+          <div class="delivery-strip-item">
+            <span class="strip-icon" aria-hidden="true">⏱️</span>
+            <span>Lunch &amp; Dinner Slots</span>
+          </div>
+          <div class="strip-divider" aria-hidden="true">•</div>
+          <div class="delivery-strip-item">
+            <span class="strip-icon" aria-hidden="true">🏷️</span>
+            <span>Pocket-Friendly Plans</span>
+          </div>
+        </div>
+      </section>
 
-          <div class="hero-content card">
-            <p class="kicker">Homemade meals in Hisar</p>
+      <!-- Full-Width Hero Section -->
+      <section class="hero-section-full" id="home">
+        <div class="hero-container">
+          <div class="hero-left-content">
+            <div class="hero-badge-eyebrow">
+              <span class="badge-sparkle">✦</span>
+              <p class="kicker">Homemade meals in Hisar</p>
+            </div>
+            
             <h1>Best Tiffin Service in Hisar for Daily Lunch &amp; Dinner</h1>
+            
             <p class="hero-text">
               Food 4 Mood Tiffin Service gives you ghar jaisa homemade taste at
               budget-friendly price. Fresh, simple, filling meals for your daily
               routine.
             </p>
-            <div class="cta-row">
-              <a class="btn btn-primary" href="tel:+919350973425">Call Now</a>
-              <a class="btn btn-ghost" href="#pricing">See Pricing</a>
+
+            <div class="hero-cta-group">
+              <a class="btn btn-primary btn-hero-main" href="tel:+919350973425">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>Call Now</span>
+              </a>
+              <a class="btn btn-ghost btn-hero-secondary" href="#pricing">
+                <span>See Pricing</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
             </div>
-            <div class="highlights">
-              <article class="mini-card">
-                <h3>Homemade Taste</h3>
-                <p>Simple daily food like home.</p>
+
+            <div class="highlights-horizontal">
+              <article class="highlight-item">
+                <div class="highlight-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+                    <path d="M7 2v20"></path>
+                    <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
+                  </svg>
+                </div>
+                <div class="highlight-info">
+                  <h3>Homemade Taste</h3>
+                  <p>Simple daily food like home.</p>
+                </div>
               </article>
-              <article class="mini-card">
-                <h3>Pocket-Friendly</h3>
-                <p>Affordable plan for students and families.</p>
+
+              <article class="highlight-item">
+                <div class="highlight-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  </svg>
+                </div>
+                <div class="highlight-info">
+                  <h3>Pocket-Friendly</h3>
+                  <p>Affordable plan for students and families.</p>
+                </div>
               </article>
-              <article class="mini-card">
-                <h3>Fresh &amp; Hygienic</h3>
-                <p>Clean cooking with fresh ingredients.</p>
+
+              <article class="highlight-item">
+                <div class="highlight-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                  </svg>
+                </div>
+                <div class="highlight-info">
+                  <h3>Fresh &amp; Hygienic</h3>
+                  <p>Clean cooking with fresh ingredients.</p>
+                </div>
               </article>
             </div>
           </div>
 
-          <article class="card coverage-card" aria-label="Delivery coverage">
-            <h3>Fast Delivery Across Hisar</h3>
-            <p>From students to working families, we serve most local areas daily.</p>
-            <div class="coverage-points">
-              <span>Lunch + Dinner Slots</span>
-              <span>Fresh Home-Style Meals</span>
-              <span>Pocket-Friendly Plans</span>
-            </div>
-          </article>
+          <div class="hero-right-visual">
+            <article class="coverage-banner-card" aria-label="Delivery coverage">
+              <div class="coverage-meta">
+                <span class="loc-pin" aria-hidden="true">📍</span>
+                <div>
+                  <h3>Fast Delivery Across Hisar</h3>
+                  <p>From students to working families, we serve most local areas daily.</p>
+                </div>
+              </div>
+              <div class="coverage-points">
+                <span>Lunch + Dinner Slots</span>
+                <span>Fresh Home-Style Meals</span>
+                <span>Pocket-Friendly Plans</span>
+              </div>
+            </article>
 
-          <div class="hero-collage card" aria-label="Food image collage">
-            <img
-              src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=80"
-              alt="Indian thali with roti and sabzi"
-              loading="lazy"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=80"
-              alt="Indian curry meal plate"
-              loading="lazy"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=900&q=80"
-              alt="Indian food with naan and curry"
-              loading="lazy"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=900&q=80"
-              alt="Samosa and snacks plate"
-              loading="lazy"
-            />
+            <div class="hero-gallery-wrap">
+              <div class="gallery-primary-card">
+                <img
+                  src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=80"
+                  alt="Indian thali with roti and sabzi"
+                  loading="lazy"
+                />
+                <div class="primary-tag-floating">
+                  <span class="star-rating">★ 4.9</span>
+                  <span>Ghar Ka Khana &bull; Hisar</span>
+                </div>
+              </div>
+
+              <div class="gallery-secondary-col">
+                <div class="gallery-sub-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=80"
+                    alt="Indian curry meal plate"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="gallery-sub-row">
+                  <div class="gallery-thumb-card">
+                    <img
+                      src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=900&q=80"
+                      alt="Indian food with naan and curry"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="gallery-thumb-card">
+                    <img
+                      src="https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=900&q=80"
+                      alt="Samosa and snacks plate"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="why-us">
-        <div class="container">
-          <h2>Why Choose Food 4 Mood</h2>
-          <div class="card-grid four">
-            <article class="card feature-card">
+      <!-- Full-Width Why Choose Us Section -->
+      <section class="section-full why-choose-section" id="why-us">
+        <div class="content-container">
+          <div class="section-heading-block">
+            <span class="section-kicker">Our Quality Promise</span>
+            <h2>Why Choose Food 4 Mood</h2>
+            <div class="heading-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="features-editorial-grid">
+            <article class="feature-col">
+              <div class="feature-top-bar">
+                <span class="feature-idx">01</span>
+                <span class="feature-emoji">🍲</span>
+              </div>
               <h3>Ghar Jaisa Taste</h3>
               <p>Balanced masala and comfort food feel every day.</p>
             </article>
-            <article class="card feature-card">
+
+            <article class="feature-col">
+              <div class="feature-top-bar">
+                <span class="feature-idx">02</span>
+                <span class="feature-emoji">🍱</span>
+              </div>
               <h3>Good Quantity</h3>
               <p>Proper meal portion so you feel full and satisfied.</p>
             </article>
-            <article class="card feature-card">
+
+            <article class="feature-col">
+              <div class="feature-top-bar">
+                <span class="feature-idx">03</span>
+                <span class="feature-emoji">✨</span>
+              </div>
               <h3>Clean Cooking</h3>
               <p>Hygienic kitchen habits and fresh daily prep.</p>
             </article>
-            <article class="card feature-card">
+
+            <article class="feature-col">
+              <div class="feature-top-bar">
+                <span class="feature-idx">04</span>
+                <span class="feature-emoji">⏱️</span>
+              </div>
               <h3>On-Time Effort</h3>
               <p>We try our best for on-time lunch and dinner delivery.</p>
             </article>
@@ -227,171 +365,501 @@
         </div>
       </section>
 
-      <section class="section" id="menu">
-        <div class="container">
-          <h2>Menu</h2>
-          <p class="menu-eyebrow">Fresh Daily Menu</p>
-          <article class="card menu-card">
-            <div class="menu-frame">
-              <img src="./menu/menu.jpg" alt="Food 4 Mood tiffin menu" loading="lazy" />
+      <!-- Full-Width Menu Section -->
+      <section class="section-full menu-showcase-section" id="menu">
+        <div class="content-container">
+          <div class="section-heading-block">
+            <p class="menu-eyebrow">Fresh Daily Menu</p>
+            <h2>Menu</h2>
+            <div class="heading-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="menu-display-container">
+            <div class="menu-control-bar">
+              <div class="menu-indicator">
+                <span class="status-live-dot" aria-hidden="true"></span>
+                <span>Weekly Rotational Menu &bull; Lunch &amp; Dinner</span>
+              </div>
+              <button class="btn-menu-expand" id="openMenuModalBtn" type="button" aria-label="View menu full size">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <polyline points="9 21 3 21 3 15"></polyline>
+                  <line x1="21" y1="3" x2="14" y2="10"></line>
+                  <line x1="3" y1="21" x2="10" y2="14"></line>
+                </svg>
+                <span>Tap to Zoom Full Menu</span>
+              </button>
             </div>
-          </article>
-          <p class="note">Menu can change sometimes based on fresh items.</p>
+
+            <article class="menu-board-card" id="menuFrameTrigger" tabindex="0" role="button" aria-label="Open full size menu image">
+              <div class="menu-image-wrap">
+                <img src="./menu/menu.jpg" alt="Food 4 Mood tiffin menu" loading="lazy" />
+                <div class="menu-overlay-hint" aria-hidden="true">
+                  <div class="hint-glass-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                    <span>Click / Tap to Enlarge</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <div class="menu-caption-row">
+              <p class="note">Menu can change sometimes based on fresh items.</p>
+              <div class="menu-direct-call">
+                <span>Want to know today's sabzi?</span>
+                <a class="link-call-sm" href="tel:+919350973425">Call +91 93509 73425</a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section" id="pricing">
-        <div class="container">
-          <h2>Simple Pricing</h2>
-          <div class="card-grid two pricing-grid">
-            <article class="card price-card">
-              <h3>Monthly Package</h3>
-              <p class="price">₹3000 <span>/ month</span></p>
-              <ul>
-                <li>Lunch + Dinner (2 times daily)</li>
-                <li>Best for regular daily meals</li>
-                <li>Budget-friendly monthly value</li>
+      <!-- Full-Width Pricing Section -->
+      <section class="section-full pricing-showcase-section" id="pricing">
+        <div class="content-container">
+          <div class="section-heading-block">
+            <span class="section-kicker">Simple &amp; Budget-Friendly</span>
+            <h2>Simple Pricing</h2>
+            <div class="heading-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="pricing-plans-wrapper">
+            <!-- Monthly Package -->
+            <article class="pricing-plan-card featured-tier">
+              <div class="plan-popular-badge">
+                <span>★ Most Popular &bull; Complete Plan</span>
+              </div>
+              <div class="plan-header">
+                <h3>Monthly Package</h3>
+                <p class="plan-tagline">Lunch + Dinner for 30 days &bull; No cooking hassle</p>
+                <div class="plan-price-block">
+                  <p class="price">₹3000 <span>/ month</span></p>
+                </div>
+              </div>
+
+              <div class="plan-divider" aria-hidden="true"></div>
+
+              <ul class="plan-checklist">
+                <li>
+                  <svg class="check-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Lunch + Dinner (2 times daily)</span>
+                </li>
+                <li>
+                  <svg class="check-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Best for regular daily meals</span>
+                </li>
+                <li>
+                  <svg class="check-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Budget-friendly monthly value</span>
+                </li>
               </ul>
-              <a class="btn btn-primary" href="tel:+919350973425">Call to Start</a>
+
+              <div class="plan-action">
+                <a class="btn btn-primary btn-plan-cta" href="tel:+919350973425">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  <span>Call to Start</span>
+                </a>
+              </div>
             </article>
-            <article class="card price-card">
-              <h3>Daily Tiffin</h3>
-              <p class="price">₹70 <span>/ tiffin</span></p>
-              <ul>
-                <li>Order as per your need</li>
-                <li>Freshly prepared food</li>
-                <li>Good option for one-time meal</li>
+
+            <!-- Daily Tiffin -->
+            <article class="pricing-plan-card standard-tier">
+              <div class="plan-header">
+                <h3>Daily Tiffin</h3>
+                <p class="plan-tagline">Single meal order whenever you need it</p>
+                <div class="plan-price-block">
+                  <p class="price">₹70 <span>/ tiffin</span></p>
+                </div>
+              </div>
+
+              <div class="plan-divider" aria-hidden="true"></div>
+
+              <ul class="plan-checklist">
+                <li>
+                  <svg class="check-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Order as per your need</span>
+                </li>
+                <li>
+                  <svg class="check-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Freshly prepared food</span>
+                </li>
+                <li>
+                  <svg class="check-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Good option for one-time meal</span>
+                </li>
               </ul>
-              <a class="btn btn-primary" href="tel:+919350973425">Call for Today</a>
+
+              <div class="plan-action">
+                <a class="btn btn-ghost btn-plan-cta" href="tel:+919350973425">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  <span>Call for Today</span>
+                </a>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="how-it-works">
-        <div class="container">
-          <h2>How It Works</h2>
-          <div class="card-grid three">
-            <article class="card step-card">
-              <h3>1. Call Us</h3>
-              <p>Tell your meal preference and location in Hisar.</p>
+      <!-- Full-Width How It Works Section -->
+      <section class="section-full how-process-section" id="how-it-works">
+        <div class="content-container">
+          <div class="section-heading-block">
+            <span class="section-kicker">3 Simple Steps</span>
+            <h2>How It Works</h2>
+            <div class="heading-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="timeline-steps-grid">
+            <article class="timeline-step-card">
+              <div class="step-badge-wrap">
+                <span class="step-num-pill">1</span>
+                <span class="step-icon-sub">📞</span>
+              </div>
+              <div class="step-body">
+                <h3>1. Call Us</h3>
+                <p>Tell your meal preference and location in Hisar.</p>
+              </div>
             </article>
-            <article class="card step-card">
-              <h3>2. Confirm Plan</h3>
-              <p>Choose monthly package or daily tiffin as you need.</p>
+
+            <div class="timeline-connector" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+
+            <article class="timeline-step-card">
+              <div class="step-badge-wrap">
+                <span class="step-num-pill">2</span>
+                <span class="step-icon-sub">📋</span>
+              </div>
+              <div class="step-body">
+                <h3>2. Confirm Plan</h3>
+                <p>Choose monthly package or daily tiffin as you need.</p>
+              </div>
             </article>
-            <article class="card step-card">
-              <h3>3. Enjoy Meal</h3>
-              <p>Get fresh homemade food for lunch and dinner.</p>
+
+            <div class="timeline-connector" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+
+            <article class="timeline-step-card">
+              <div class="step-badge-wrap">
+                <span class="step-num-pill">3</span>
+                <span class="step-icon-sub">🍱</span>
+              </div>
+              <div class="step-body">
+                <h3>3. Enjoy Meal</h3>
+                <p>Get fresh homemade food for lunch and dinner.</p>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="reviews">
-        <div class="container">
-          <h2>Customer Reviews</h2>
-          <div class="card-grid three">
-            <article class="card review-card">
+      <!-- Full-Width Reviews Section -->
+      <section class="section-full reviews-showcase-section" id="reviews">
+        <div class="content-container">
+          <div class="section-heading-block">
+            <span class="section-kicker">Customer Stories</span>
+            <h2>Customer Reviews</h2>
+            <div class="heading-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="reviews-editorial-grid">
+            <article class="testimonial-card">
+              <div class="stars-row" aria-label="5 stars rating">★★★★★</div>
               <p>
                 "Taste bilkul home jaisa hai. Monthly plan is very helpful for my
                 office routine."
               </p>
-              <h3>- Priya Sharma</h3>
+              <div class="reviewer-meta">
+                <div class="reviewer-avatar">PS</div>
+                <div class="reviewer-name">
+                  <h3>- Priya Sharma</h3>
+                  <span class="user-role">Office Professional &bull; Hisar</span>
+                </div>
+              </div>
             </article>
-            <article class="card review-card">
+
+            <article class="testimonial-card">
+              <div class="stars-row" aria-label="5 stars rating">★★★★★</div>
               <p>
                 "Portion and quality both are good. Budget mein best tiffin service
                 in Hisar."
               </p>
-              <h3>- Rohit Verma</h3>
+              <div class="reviewer-meta">
+                <div class="reviewer-avatar">RV</div>
+                <div class="reviewer-name">
+                  <h3>- Rohit Verma</h3>
+                  <span class="user-role">Student &bull; Daily Tiffin</span>
+                </div>
+              </div>
             </article>
-            <article class="card review-card">
+
+            <article class="testimonial-card">
+              <div class="stars-row" aria-label="5 stars rating">★★★★★</div>
               <p>
                 "Clean food and simple taste. Delivery timing bhi mostly proper
                 milta hai."
               </p>
-              <h3>- Neha Malik</h3>
+              <div class="reviewer-meta">
+                <div class="reviewer-avatar">NM</div>
+                <div class="reviewer-name">
+                  <h3>- Neha Malik</h3>
+                  <span class="user-role">Monthly Subscriber</span>
+                </div>
+              </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section" id="faq">
-        <div class="container">
-          <h2>FAQ</h2>
-          <div class="faq-list">
-            <details class="card faq-item">
-              <summary>Do you serve both lunch and dinner?</summary>
-              <p>Yes, monthly package includes lunch and dinner both.</p>
+      <!-- Full-Width FAQ Section -->
+      <section class="section-full faq-showcase-section" id="faq">
+        <div class="content-container-narrow">
+          <div class="section-heading-block">
+            <span class="section-kicker">Got Questions?</span>
+            <h2>FAQ</h2>
+            <div class="heading-line" aria-hidden="true"></div>
+          </div>
+
+          <div class="faq-accordion-list">
+            <details class="faq-accordion-item" open>
+              <summary>
+                <span>Do you serve both lunch and dinner?</span>
+                <span class="accordion-toggle-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-content-inner">
+                <p>Yes, monthly package includes lunch and dinner both.</p>
+              </div>
             </details>
-            <details class="card faq-item">
-              <summary>What is price for monthly package?</summary>
-              <p>Monthly package is ₹3000 for 2 times meal daily.</p>
+
+            <details class="faq-accordion-item">
+              <summary>
+                <span>What is price for monthly package?</span>
+                <span class="accordion-toggle-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-content-inner">
+                <p>Monthly package is ₹3000 for 2 times meal daily.</p>
+              </div>
             </details>
-            <details class="card faq-item">
-              <summary>Can I order only for one day?</summary>
-              <p>Yes, daily price is ₹70 per tiffin.</p>
+
+            <details class="faq-accordion-item">
+              <summary>
+                <span>Can I order only for one day?</span>
+                <span class="accordion-toggle-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-content-inner">
+                <p>Yes, daily price is ₹70 per tiffin.</p>
+              </div>
             </details>
-            <details class="card faq-item">
-              <summary>Where are you located?</summary>
-              <p>We are based in Hisar, Haryana.</p>
+
+            <details class="faq-accordion-item">
+              <summary>
+                <span>Where are you located?</span>
+                <span class="accordion-toggle-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-content-inner">
+                <p>We are based in Hisar, Haryana.</p>
+              </div>
             </details>
-            <details class="card faq-item">
-              <summary>How to place order quickly?</summary>
-              <p>Just tap the call button and confirm your details on phone.</p>
+
+            <details class="faq-accordion-item">
+              <summary>
+                <span>How to place order quickly?</span>
+                <span class="accordion-toggle-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-content-inner">
+                <p>Just tap the call button and confirm your details on phone.</p>
+              </div>
             </details>
           </div>
         </div>
       </section>
 
-      <section class="section" id="contact">
-        <div class="container">
-          <h2>Contact</h2>
-          <article class="card contact-card">
-            <p><strong>Phone:</strong> <a href="tel:+919350973425">+91 93509 73425</a></p>
-            <p>
-              <strong>Instagram:</strong>
-              <a
-                href="https://www.instagram.com/food4mood_tiffin_service_hisar/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >food4mood_tiffin_service_hisar</a
-              >
-            </p>
-            <p><strong>Location:</strong> Hisar, Haryana</p>
-          </article>
+      <!-- Full-Width Immersive Contact Banner -->
+      <section class="section-full contact-cta-section" id="contact">
+        <div class="content-container">
+          <div class="contact-hero-banner">
+            <div class="contact-banner-header">
+              <span class="contact-eyebrow">Get Fresh Meals Delivered</span>
+              <h2>Contact</h2>
+              <p class="contact-subheading">
+                Ready for hygienic, ghar jaisa food every day? Call directly or connect with us on Instagram to start your meal service in Hisar.
+              </p>
+            </div>
+
+            <div class="contact-channels-grid">
+              <div class="contact-channel-card">
+                <div class="channel-icon-circle">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="channel-content">
+                  <p><strong>Phone:</strong> <a class="channel-link" href="tel:+919350973425">+91 93509 73425</a></p>
+                  <span class="channel-hint">Instant Order &amp; Inquiry</span>
+                </div>
+              </div>
+
+              <div class="contact-channel-card">
+                <div class="channel-icon-circle">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </div>
+                <div class="channel-content">
+                  <p>
+                    <strong>Instagram:</strong>
+                    <a
+                      class="channel-link"
+                      href="https://www.instagram.com/food4mood_tiffin_service_hisar/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >food4mood_tiffin_service_hisar</a
+                    >
+                  </p>
+                  <span class="channel-hint">Follow for daily menu updates</span>
+                </div>
+              </div>
+
+              <div class="contact-channel-card">
+                <div class="channel-icon-circle">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="channel-content">
+                  <p><strong>Location:</strong> Hisar, Haryana</p>
+                  <span class="channel-hint">Serving all sectors &amp; colonies</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-action-center">
+              <a class="btn btn-primary btn-contact-call" href="tel:+919350973425">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>Call Now: +91 93509 73425</span>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <p class="brand-line">Food 4 Mood Tiffin Service</p>
-        <nav class="footer-links" aria-label="Quick links">
-          <a href="#home">Home</a>
-          <a href="#menu">Menu</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <div class="footer-contact">
-          <a href="tel:+919350973425">+91 93509 73425</a>
-          <a
-            href="https://www.instagram.com/food4mood_tiffin_service_hisar/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Instagram</a
-          >
+    <!-- Menu Zoom Modal (Lightweight Vanilla JS Dialog) -->
+    <dialog class="menu-modal" id="menuModal" aria-label="Food 4 Mood Full Menu">
+      <div class="menu-modal-content">
+        <div class="menu-modal-header">
+          <h3>Food 4 Mood Tiffin Menu</h3>
+          <button class="menu-modal-close" id="closeMenuModalBtn" type="button" aria-label="Close menu modal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
         </div>
-        <p class="footer-credit">
-          powered and secured by
-          <a
-            href="https://brandomize.netlify.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Brandomize.studio</a
-          >
-        </p>
+        <div class="menu-modal-body">
+          <img src="./menu/menu.jpg" alt="Food 4 Mood tiffin menu" />
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Full-Width Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-grid-four">
+          <div class="footer-col brand-col">
+            <p class="brand-line">Food 4 Mood Tiffin Service</p>
+            <p class="footer-tagline">
+              Delivering hygienic, home-style daily lunch and dinner meals across Hisar, Haryana.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">Quick Links</h4>
+            <nav class="footer-links" aria-label="Quick links">
+              <a href="#home">Home</a>
+              <a href="#menu">Menu</a>
+              <a href="#pricing">Pricing</a>
+              <a href="#contact">Contact</a>
+            </nav>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">Get in Touch</h4>
+            <div class="footer-contact-list">
+              <a class="footer-link-item" href="tel:+919350973425">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>+91 93509 73425</span>
+              </a>
+              <a
+                class="footer-link-item"
+                href="https://www.instagram.com/food4mood_tiffin_service_hisar/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <span>Instagram</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">Location</h4>
+            <p class="footer-loc-text">Hisar, Haryana, India</p>
+            <span class="delivery-status-tag">Serving Citywide</span>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <p class="footer-credit">
+            A Gift from
+            <a
+              href="https://brandomize.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Brandomize</a
+            >
+            in love
+          </p>
+        </div>
       </div>
     </footer>
 
